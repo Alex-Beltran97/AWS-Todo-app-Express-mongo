@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo</title>
+  <style>
+
+    .thing-container {
+      padding: 0 16rem;
+    }
+
+    .thing {
+      display: flex;
+      border: 1px solid black;
+      border-radius: 0.8rem;
+      padding: 1rem;
+      margin-top: 1rem;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add your list of things</h1>
+  <form id="form">
+    <label for="thing">Set your thing here:</label>
+    <input id="thing" type="text" name="name" />
+    <button type="submit">Submit</button>
+  </form>
+  <hr />
+  <ul class="thing-container" id="task-container">
+  </ul>
+
+  <template id="template-task">
+    <li class="thing">
+      <p id="taskName">Thing1</p>
+      <div>
+        <button id="updateTask">Update</button>
+        <button id="deleteTask">Delete</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="./src/index.js" type="module"></script>
+</body>
+</html>
